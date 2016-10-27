@@ -1,25 +1,31 @@
-from abc import ABCMeta, abstractmethod
+from abc import ABCMeta
 
 
 class Ship:
     __metaclass__ = ABCMeta
+    # amount of income required to build this ship
     cost = 1
 
-    def __init__(self):
+    def __init__(self, player=None):
         self._attack_val = 1
         self._defense_val = 1
         self._maxhp = 1
         self._hp = self._maxhp
+        self._player = player
 
-    @abstractmethod
+    # @return amount needed on die roll to deal damage while attacker
+    @property
     def get_attack(self):
         return self._attack_val
 
-    @abstractmethod
+    # @return amount needed on die roll to deal damage while defender
+    @property
     def get_defense(self):
         return self._defense_val
 
-    @abstractmethod
+    # desc recovers health fully
+    # only used by battleship, which has 2 hp instead of 1
+    # all other ships are destroyed instantly when damaged
     def heal(self):
         self._hp = self._maxhp
 
