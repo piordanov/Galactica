@@ -9,6 +9,7 @@ class BoardTest(unittest.TestCase):
         self.board = GalacticaBoard.Board()
 
     def test_generate_world(self):
+        self.board._graph = []
         for i in range(0, 4):
             planet = Planet.Planet('test' + str(i), random.randint(0, 5))
             self.board.add_planet(planet)
@@ -20,6 +21,7 @@ class BoardTest(unittest.TestCase):
         self.board.print_board()
 
     def test_random_name_gen(self):
+        print "test random names\n"
         print GalacticaBoard.Board.get_random_planet_names(3)
 
     def test_random_world(self):

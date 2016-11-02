@@ -10,7 +10,7 @@ def add_connection(planet1, planet2):
 
 class Board:
 
-    def __init__(self, players=None, num_players=2, num_planets=8, prob=0.4, income_range=6):
+    def __init__(self, players=None, num_players=2, num_planets=8, prob=0.2, income_range=6):
         self._graph = []
         self._players = []
         if players is not None:
@@ -18,6 +18,7 @@ class Board:
         else:
             self.generate_players(num_players)
         self.generate_random_universe(num_planets, prob, income_range)
+        self.assign_player_homeworlds()
 
     # creates num_players players with random colors
     # @param num_players number of players available on the board
@@ -33,7 +34,7 @@ class Board:
     # @param prob defines the density of the world
     # @param income_range max amount of income a planet can have
     # @return nothing changes the state of the board
-    def generate_random_universe(self, num_planets=8, prob=0.4, income_range=6):
+    def generate_random_universe(self, num_planets, prob, income_range):
         planet_names = self.get_random_planet_names(num_planets)
         for i in range(0,num_planets):
             income = random.randint(1, income_range)
@@ -51,6 +52,12 @@ class Board:
                     add_connection(planet, neighbor)
 
         # @TODO ensure that graph is connected
+
+    def assign_player_homeworlds(self):
+        rand_planets = random.sample(self._graph,len(self._players))
+        for i, player in enumerate(self._players):
+            random_planet = rand_planets[i]
+            player.assign_planet(random_planet)
 
     def add_planet(self, planet):
         self._graph.append(planet)
@@ -74,5 +81,8 @@ class Board:
             print "Neighbors:"
             for n in planet.get_neighbors():
                 print str(n)
+
+        for player in self._players:
+            print str(player)
 
 
