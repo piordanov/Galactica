@@ -62,6 +62,9 @@ class Board:
     def add_planet(self, planet):
         self._graph.append(planet)
 
+    def get_planet(self, planet_name):
+        return [item for item in self._graph if item._name == planet_name][0]
+
     # @desc picks words from our source of random planet names acquired from fantasynamegenerators.com/planet_names.php
     # @param n the number of planet names required
     # @return a list of random planet names
