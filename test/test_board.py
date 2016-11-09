@@ -33,3 +33,4 @@ class BoardTest(unittest.TestCase):
         test_planet = Planet.Planet('testworld')
         self.board.add_planet(test_planet)
         self.assertEqual(test_planet.get_income(), self.board.get_planet('testworld').get_income())
+

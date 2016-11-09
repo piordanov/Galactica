@@ -58,12 +58,16 @@ class Board:
         for i, player in enumerate(self._players):
             random_planet = rand_planets[i]
             player.assign_planet(random_planet)
+            random_planet.add_factory()
 
     def add_planet(self, planet):
         self._graph.append(planet)
 
     def get_planet(self, planet_name):
-        return [item for item in self._graph if item._name == planet_name][0]
+        return [item for item in self._graph if item.get_name() == planet_name][0]
+
+    def get_players(self):
+        return self._players
 
     # @desc picks words from our source of random planet names acquired from fantasynamegenerators.com/planet_names.php
     # @param n the number of planet names required

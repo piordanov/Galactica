@@ -21,4 +21,3 @@ class ShipTest(unittest.TestCase):
 
         self.planet1.remove_fleet(ships)
         self.assertEqual(len(self.planet1.get_fleet()), 0)
-

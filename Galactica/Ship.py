@@ -69,3 +69,16 @@ class Destroyer(Ship):
         Ship.__init__(self)
         self._attack_val = 2
         self._defense_val = 3
+
+
+def gen_ship(ship_name):
+    if ship_name == 'Destroyer':
+        return Destroyer()
+    if ship_name == 'BattleShip':
+        return BattleShip()
+    if ship_name == 'Cruiser':
+        return Cruiser()
+    if ship_name == 'StrikeCraft':
+        return StrikeCraft()
+    else:
+        return None

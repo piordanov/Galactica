@@ -12,4 +12,3 @@ class ShipTest(unittest.TestCase):
         self.assertEqual(ship.get_attack, 2)
         ship = Ship.BattleShip()
         self.assertEqual(ship.get_attack, 4)
-
