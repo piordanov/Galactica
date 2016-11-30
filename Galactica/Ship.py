@@ -30,7 +30,10 @@ class Ship:
         self._hp = self._maxhp
 
     def __str__(self):
-        return "%s at hp %s" % (self.__name__, self._hp)
+        return "%s at hp %s" % (self.__class__.__name__, self._hp)
+
+    def get_name(self):
+        return self.__class__.__name__
 
 
 class StrikeCraft(Ship):

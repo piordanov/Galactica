@@ -1,5 +1,5 @@
 import unittest
-from Galactica import Planet, Ship
+from Galactica import Planet, Ship, Player
 
 
 class ShipTest(unittest.TestCase):
@@ -16,8 +16,8 @@ class ShipTest(unittest.TestCase):
 
     def test_add_remove_fleet(self):
         ships = [Ship.Destroyer(), Ship.BattleShip(), Ship.Cruiser(), Ship.StrikeCraft()]
-        self.planet1.send_in_fleet(ships)
+        self.planet1.send_in_fleet(ships, 'test_player')
         self.assertEqual(len(self.planet1.get_fleet()), 4)
 
-        self.planet1.remove_fleet(ships)
+        self.planet1.remove_fleet(ships, 'test_player')
         self.assertEqual(len(self.planet1.get_fleet()), 0)

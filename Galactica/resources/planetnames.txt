@@ -6,8 +6,8 @@ Seulea
 Soutune
 Strelezuno
 Shukatis
-Strichi TKJ
-Glurn 67
+Strichi-TKJ
+Glurn-67
 Wowhaegawa
 Egriyvis
 Luflides
@@ -16,8 +16,8 @@ Koater
 Suecury
 Plaalara
 Craezuno
-Clion H97
-Pluna H
+Clion-H97
+Pluna-H
 Xothahiri
 Kowhawei
 Yatrov
@@ -26,8 +26,8 @@ Wianides
 Moazuno
 Sluunerth
 Spupetera
-Snade V5Q
-Shone IG
+Snade-V5Q
+Shone-IG
 Efluclite
 Uclunov
 Boclade
@@ -36,8 +36,8 @@ Pourilia
 Oruta
 Chaeter
 Cruxulara
-Shao 5EM
-Grides 8I
+Shao-5EM
+Grides-8I
 Fostalea
 Vofrayzuno
 Xoprars
@@ -46,8 +46,8 @@ Ieinerth
 Zoeria
 Gresurus
 Grealea
-Whuna XWD
-Drolla SP
+Whuna-XWD
+Drolla-SP
 Qogleytera
 Rachuylia
 Mesmurn
@@ -56,8 +56,8 @@ Iourilia
 Oytune
 Crewenus
 Shuiuwei
-Glolla 2J1
-Smerth L5A4
+Glolla-2J1
+Smerth-L5A4
 Hucreagawa
 Sufroulia
 Pablov
@@ -66,8 +66,8 @@ Uehines
 Riunus
 Shetayama
 Fraeturn
-Skone RX
-Bruna 058N
+Skone-RX
+Bruna-058N
 Uswuinia
 Qopleustea
 Suskov
@@ -76,8 +76,8 @@ Yiemia
 Beiphus
 Shodeliv
 Thoqeter
-Brion 40Q
-Friri R2Q4
+Brion-40Q
+Friri-R2Q4
 Qoskaliv
 Gepraerilia
 Jofrilles
@@ -86,8 +86,8 @@ Hoyturn
 Wuyyama
 Glocenope
 Snuqorus
-Stryke UMK
-Scilia L30
+Stryke-UMK
+Scilia-L30
 Hapruycarro
 Pucroiwei
 Xostarth
@@ -96,5 +96,5 @@ Riaturn
 Vaywei
 Sneanides
 Shoturuta
-Dreron 594
-Dronoe 8SL8
+Dreron-594
+Dronoe-8SL8

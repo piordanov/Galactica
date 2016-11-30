@@ -3,10 +3,14 @@ import Ship
 
 class Player:
 
-    def __init__(self, color="white"):
+    def __init__(self, color="white", name=''):
         self._planets = set()
+        self._name = name
         self._color = color
         self.curr_income = 20
+
+    def get_name(self):
+        return self._name
 
     def owns_planet(self, planet_name):
         return len([item for item in self._planets if item.get_name() == planet_name]) == 1
@@ -16,6 +20,10 @@ class Player:
 
     def assign_planet(self, planet):
         self._planets.add(planet)
+
+    def lose_planet(self, planet):
+        if planet in self._planets:
+            self._planets.remove(planet)
 
     def add_income(self, amount):
         self.curr_income += amount
@@ -49,7 +57,7 @@ class Player:
                 return False
         purchased = self.remove_income(total_cost)
         if purchased:
-            planet.send_in_fleet(fleet)
+            planet.send_in_fleet(fleet, self.get_name())
             return True
         else:
             return False
@@ -70,7 +78,7 @@ class Player:
         return self._color
 
     def __str__(self):
-        result = self._color + ":"
+        result = self._name + ': ' + self._color
         for planet in self._planets:
             result += " " + planet.get_name()
         return result
